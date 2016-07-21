@@ -1,4 +1,4 @@
-[~ if (r.education.courses && r.education.courses.length) 
+[~ if (r.education.history && r.education.history.length) 
 { ~]
 \cvsection{Relevant Coursework}
 
@@ -27,12 +27,10 @@
 \begin{cvcourses}
   [~ _.each( r.education.history, function(cou) { 
       var courses = cou.curriculum;
-      var gro_cou = ~~( courses / 3 ); // NOT bits (only int) -> NOT again to bring back to first var
-      var rem_cou = courses.length() % 3; // 3 {}{}{} = num row
-      while( courses.length() > 0 ){ ~]
+      while( courses.length > 0 ){ ~]
         \cvcourse
       [~ for( var i = 0; i < 3; ++i ){ ~]
-        {[[ cvcourse.shift() ]]}
+        {[[ courses.shift() ]]}
         [~ } ~]
       [~ } ~]
   [~ }); ~]
