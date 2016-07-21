@@ -27,17 +27,24 @@
 \begin{cvcourses}
   [~ _.each( r.education.history, function(cou) { 
       var courses = cou.curriculum;
+      var len_cou = courses.length;
+      var isCourse = function(cou){
+        if( isNaN(cou) == false ){
+          return;
+        }
+        else{
+          return cou;
+        }
+      }
+
       while( courses.length > 0 ){ ~]
-      [~ for( var i = 0; i < 3; ++i ){ ~]
         [[ if(courses != undefined){
-                if( i == 0 ){
-                  return '\\cvcourse{' + courses.shift() + '}';
+                if( courses.length == len_courses ){
+                  print('\\cvcourse'); 
                 }
                 else{
-                  return '{' + courses.shift() + '}';
                 }
           } ]]
-      [~ } ~]
     [~ } ~]
   [~ }); ~]
 \end{cvcourses}
