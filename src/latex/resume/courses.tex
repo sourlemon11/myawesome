@@ -1,0 +1,41 @@
+[~ if (r.education.courses && r.education.courses.length) 
+{ ~]
+\cvsection{Relevant Coursework}
+
+%Mechanical Control Systems
+%Matlab for Engineers	\\
+%Heat Transfer 
+%Mechanical Engineer Labs  \\
+%Design of Mechanical Components 
+%Mechanical Engineering Measurements \\
+%Elements of Electrical Engineering         % Mechanics of Materials\\
+%Engineering Graphics \& CAD 
+%Optics \\
+%Heat Transfer 
+%Computational Mechanics
+%Mechanics of Materials
+%Optics
+%Fluid Mechanics
+%Design Mech Compnts
+%Cad in mech engg
+%Drafting
+%Computational Mechanics
+%Engineering Economics
+%Thermodynamics 
+%Mech props of matls
+%Vibrations And Controls 
+\begin{cvcourses}
+  [~ _.each( r.education.history, function(cou) { 
+      var courses = cou.curriculum;
+      var gro_cou = ~~( courses / 3 ); // NOT bits (only int) -> NOT again to bring back to first var
+      var rem_cou = courses.length() % 3; // 3 {}{}{} = num row
+      while( courses.length() > 0 ){ ~]
+        \cvcourse
+      [~ for( var i = 0; i < 3; ++i ){ ~]
+        {[[ cvcourse.shift() ]]}
+        [~ } ~]
+      [~ } ~]
+  [~ }); ~]
+\end{cvcourses}
+
+[~ } ~]

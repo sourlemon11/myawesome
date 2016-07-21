@@ -1,0 +1,42 @@
+{
+ "title": "awesome",
+ "description": "A technical résumé theme based on Awesome-CV for LaTeX.",
+ "engine": "underscore",
+ "url": "https://github.com/posquit0/Awesome-CV",
+ "author": "Byungjin Park <posquit0.bj@gmail.com> (http://www.posquit0.com)",
+ "delimeters": {
+  "interpolate": "\\[\\[([\\s\\S]+?)\\]\\]",
+  "escape": "\\[\\=([\\s\\S]+?)\\]\\]",
+  "evaluate": "\\[~([\\s\\S]+?)~]",
+  "comment": "\\[\\#([\\s\\S]+?)\\#\\]"
+ },
+ "leaf": true,
+ "explicit": true,
+ "formats": {
+  "latex": {
+   "transform": [
+    "src/latex/resume.tex",
+    "src/latex/cv.tex",
+    "src/latex/resume/committees.tex",
+    "src/latex/resume/education.tex",
+    "src/latex/resume/courses.tex",
+    "src/latex/resume/experience.tex",
+    "src/latex/resume/extracurricular.tex",
+    "src/latex/resume/honors.tex",
+    "src/latex/resume/presentation.tex",
+    "src/latex/resume/summary.tex",
+    "src/latex/resume/writing.tex",
+    "src/latex/cv/committees.tex",
+    "src/latex/cv/education.tex",
+    "src/latex/cv/experience.tex",
+    "src/latex/cv/extracurricular.tex",
+    "src/latex/cv/honors.tex",
+    "src/latex/cv/presentation.tex",
+    "src/latex/cv/skills.tex",
+    "src/latex/cv/writing.tex"
+   ],
+   "exclude": ["fontawesome.sty","README.md","package.json"]
+  }
+ },
+"message": "Don't forget to run 'xelatex <myresume.tex>' in the generated latex/examples folder to complete your resume build! For more info, see the theme README at https://github.com/fluentdesk/fresh-themes/blob/master/themes/awesome/README.md."
+}
