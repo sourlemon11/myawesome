@@ -30,7 +30,7 @@
       var len_cou = courses.length;
       var isCourse = function(cou){
         if( isNaN(cou) == false ){
-          return;
+          return '';
         }
         else{
           return cou;
@@ -43,6 +43,9 @@
                   print('\\cvcourse'); 
                 }
                 else{
+                  print( '{' + courses.shift() + '}'
+                        +'{' + courses.shift() + '}'
+                        +'{' + courses.shift() + '}');
                 }
           } ]]
     [~ } ~]
