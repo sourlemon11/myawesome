@@ -28,11 +28,11 @@
   [~ _.each( r.education.history, function(cou) { 
       var courses = cou.curriculum;
       while( courses.length > 0 ){ ~]
-        \cvcourse
+  \cvcourse
       [~ for( var i = 0; i < 3; ++i ){ ~]
-        {[[ courses.shift() ]]}
-        [~ } ~]
+  {[[ courses.shift() ]]}
       [~ } ~]
+    [~ } ~]
   [~ }); ~]
 \end{cvcourses}
 
