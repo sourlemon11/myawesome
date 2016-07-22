@@ -26,9 +26,9 @@
 %Vibrations And Controls 
 \begin{cvcourses}
   [~ _.each( r.education.history, function(cou) { 
-      var courses = cou.curriculum;
+      console.log(Object.keys(cou).map(function(key){return cou[key]}));
       var len_cou = courses.length;
-      var isCourse = function(cou){
+      function isCourse(cou){
         if( isNaN(cou) == false ){
           return '';
         }
@@ -37,17 +37,20 @@
         }
       }
 
-      while( courses.length > 0 ){ ~]
-        [[ if(courses != undefined){
-                if( courses.length == len_courses ){
-                  print('\\cvcourse'); 
-                }
-                else{
-                  print( '{' + courses.shift() + '}'
-                        +'{' + courses.shift() + '}'
-                        +'{' + courses.shift() + '}');
-                }
-          } ]]
+      var i = 0;
+      while( false ){ 
+        if( courses === undefined || i === 5)
+        {break;}
+        if( courses.length === len_cou ){
+          print('\\cvcourse'); 
+        }
+        else{
+          var c = [courses.shift,courses.shift,courses.shift];
+          print( '{' + isCourse( c[0] ) + '}'
+                +'{' + isCourse( c[1] ) + '}'
+                +'{' + isCourse( c[2] ) + '}');
+        }
+      ~]
     [~ } ~]
   [~ }); ~]
 \end{cvcourses}
