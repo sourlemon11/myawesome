@@ -27,6 +27,11 @@
 \begin{cvcourses}
   [~ _.each( r.education.history, function(cou) { 
       console.log(Object.keys(cou).map(function(key){return cou[key]}));
+      var courses = cou.curriculum;
+      console.log(typeof(courses));
+      console.log(courses);
+      courses.shift;
+      console.log(courses);
       var len_cou = courses.length;
       function isCourse(cou){
         if( isNaN(cou) == false ){
