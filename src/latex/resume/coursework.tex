@@ -25,7 +25,7 @@
 %Mech props of matls
 %Vibrations And Controls 
 \begin{cvcourses}
-  [~ _.each( r.education.history, function(cou) { 
+  [~ for( let cou of r.education.history ) { 
       console.log(Object.keys(cou).map(function(key){return cou[key]}));
       var courses = cou.curriculum;
       console.log(typeof(courses));
