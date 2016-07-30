@@ -17,6 +17,7 @@
    "transform": [
     "src/latex/resume.tex",
     "src/latex/cv.tex",
+    "src/latex/resume/college-experience.tex",
     "src/latex/resume/committees.tex",
     "src/latex/resume/education.tex",
     "src/latex/resume/coursework.tex",
