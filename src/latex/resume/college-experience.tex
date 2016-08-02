@@ -6,57 +6,21 @@
 
 %-------------------------------------------------------------------------------
 %	CONTENT
-%-------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------
 \begin{cventries}
+[~ _.each( r.extracurricular, function(cur) { ~]
+%---------------------------------------------------------
+  \cventry
+    {[[ cur.activity ]]} % cur title
+    {[[ cur.title ]]} % Organization
+    {[[ cur.location ]]} % Location
+    {[[ h.dateRange( cur ) ]]} % Date(s)
+    {[~ if (cur.highlights && cur.highlights.length ) { ~]
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+[[ h.pad( cur.highlights.map( function(h) { return '\\item {' + h + '}' }), -8 ) ]]
+      \end{cvitems}
+    [~ } ~]}
 
+[~ }); ~]
 %---------------------------------------------------------
-  \cventry
-    {Rutgers AIAA: Association for Unmanned Vehicle Systems} % Organization/group
-    {Core Member and Mechanical Technical Design Lead} % Affiliation/role
-    {Rutgers University} % Location
-    {2015} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of experience/contributions/knowledge
-        \item {Diagnosed and found root causes of system inoperation (mechanical, radio)}
-        \item {Implemented redundant systems for autonomous flight while keeping design parameters.}
-      \end{cvitems}
-    }
-%---------------------------------------------------------
-  \cventry
-    {Rutgers AIAA} % Organization/group
-    {Webmaster of \href{http://www.aiaa.rutgers.edu}{aiaa.rutgers.edu}} % Affiliation/role
-    {Rutgers University} % Location
-    {2014 -- 2015} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of experience/contributions/knowledge
-        \item {Created and maintained the website for Rutgers AIAA which garnered over 30 members in 2014-2015.}
-      \end{cvitems}
-    }
-%---------------------------------------------------------
-  \cventry
-    {Rutgers AIAA} % Organization/group
-    {Plane Construction in AIAA Design, Build, Fly} % Affiliation/role
-    {Rutgers University} % Location
-    {2014 -- 2014} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of experience/contributions/knowledge
-        \item {Gained critical insight into manufacturing methods of planes}
-        \item {Assisted in building the wooden competition plane for the AIAA competition Design, Build, Fly.}
-      \end{cvitems}
-    }
-
- \cventry
-  {Stockton University}
-  {Cross Country and Track, DIII}
-  {Galloway, NJ}
-  {2010 -- 2013}
-  {
-   \begin{cvitems}
-    \item {Balanced training, work, and school}
-   \end{cvitems}
-  }
-  
 \end{cventries}
-  
-
-%---------------------------------------------------------
