@@ -10,7 +10,8 @@
 %	CONTENT
 %-------------------------------------------------------------------------------
 \begin{cvskills}
-  [~var Skills=[];function isSkill(sks){if( sks === undefined || sks === null ){return '';}else{return sks;}}~][~ if (r.skills && r.skills.sets && r.skills.sets.length ) { ~][~ _.each( r.skills.sets, function(sks) { ~][~Skills === undefined ? [sks.skills] : Skills.push(sks.skills); ~][~ }); ~][~ var nrows = 3 ~]
+  [~var Skills=[];function isSkill(sks){if( sks === undefined || sks === null ){return '';}else{return sks;}}~][~ if (r.skills && r.skills.sets && r.skills.sets.length ) { ~][~ _.each( r.skills.sets, function(sks) { ~][~ Skills.push(sks.skills); ~][~ }); ~][~ var nrows = 3 ~]
+  [~ Skills = _.flatten(Skills); ~]
   [~ for ( var i = 0; i < Skills.length; i+=nrows )
   { if( Skills[i] === undefined ){break;}
   print( '\\cvskill' );

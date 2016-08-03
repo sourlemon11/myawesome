@@ -629,7 +629,7 @@
 % Define a line of cv information(skill)
 % Useage: \cvskill{<skillset>}{<level>}
 \newcommand*{\cvskill}[3]{%
- \skillsetstyle{#1} & \skilllevelstyle{#1} & \skilllevelstyle{#1}
+ \skillsetstyle{#1} & \skillsetstyle{#2} & \skillsetstyle{#3}
 \\
 }
 
