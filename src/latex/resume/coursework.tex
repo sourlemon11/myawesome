@@ -25,25 +25,30 @@
 %Mech props of matls
 %Vibrations And Controls 
 \begin{cvcourses}
-  [~ for( let cou of r.education.history ) { 
-      var courses = cou.curriculum;
-      function isCourse(cou){
-        if( cou === undefined || cou === null ){
-          return '';
-        }
-        else{
-          return cou;
-        }
+ [~ 
+    function isCourse(cou){
+      if( cou === undefined || cou === null ){
+        return '';
       }
-      for ( var i = 0; i < courses.length; i+=3 ){ 
-        if( courses[i] === undefined )
-        {break;}
-        print( '\\cvcourse{' + isCourse(courses[i]) + '}'
-              +'{' + isCourse(courses[i+1]) + '}'
-              +'{' + isCourse(courses[i+2]) + '}');
-      ~]
-    [~ } ~]
-  [~ } ~]
+      else{
+        return cou;
+      }
+    }
+    var Curriculum=[];
+    for( let cou of r.education.history ) { 
+      for( let course of cou.curriculum ) {
+        Curriculum === undefined ? Curriculum = course : Curriculum.push(course);
+      }
+   
+  } 
+  for ( var i = 0; i < Curriculum.length; i+=3 ){ 
+    if( Curriculum[i] === undefined )
+    {break;}
+    print( '\\cvcourse{' + isCourse(Curriculum[i]) + '}'
+    +'{' + isCourse(Curriculum[i+1]) + '}'
+    +'{' + isCourse(Curriculum[i+2]) + '}\n\n');
+  } 
+~]
 \end{cvcourses}
 
 [~ } ~]
