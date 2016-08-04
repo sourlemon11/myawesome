@@ -638,7 +638,7 @@
 \\
 }
 
-\newenvironment{cvskillssummary}{%
+\newenvironment{cvskillsetsummary}{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
   \begin{center}
@@ -653,6 +653,7 @@
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskillsummary}[3]{%
   \skillsetsummarystyle{#1} & \skillsetsummarystyle{#2} & \skillsetsummarystyle{#3} \\
+}
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%

@@ -9,6 +9,34 @@
 %	CONTENT
 %-------------------------------------------------------------------------------
 \begin{cvparagraph}
-[[ r.info.brief ]]
+  [[ r.info.brief ]]
 \end{cvparagraph}
+
+[~  
+  var hasKey = function(obj, key){
+    for( const o of obj ){
+      for (const prop in o){
+        if( o[prop] === key ){ return true; }else{ continue; }}}}
+
+  var isUndefined = function(arr){
+    if( arr === undefined ){
+      return '';
+    }
+    else{ return arr; }
+  }
+~]
+[~ if( hasKey( r.skills.sets, "Summary" ) ){ ~]
+\begin{cvskillsetsummary}
+  [~
+    var skssum = r.skills.sets[0].skills;
+    for( var i = 0; i < skssum.length; i+=3 ){
+      print( '\\cvskillsummary' );
+      print( '{' + isUndefined(skssum[i]) + '}' );
+      print( '{' + isUndefined(skssum[i+1]) + '}' );
+      print( '{' + isUndefined(skssum[i+2]) + '}\n\n' );
+  }
+  ~]
+\end{cvskillsetsummary}
+[~ } ~]
+
 [~ } ~]
