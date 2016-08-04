@@ -18,6 +18,7 @@
     {[[ h.dateRange( edu ) ]]} % Date(s)
     {[~ if( edu.highlights && edu.highlights.length ) { ~]
       \begin{cvitems} % Description(s) bullet points
+      \item {[[ edu.grade ]]}
 [[ h.pad( edu.highlights.map( function(h) { return '\\item {' + h + '}' }), -8 ) ]]
       \end{cvitems}
     [~ } ~]}
