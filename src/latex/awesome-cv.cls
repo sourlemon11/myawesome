@@ -638,6 +638,22 @@
 \\
 }
 
+\newenvironment{cvskillssummary}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{0.90\textwidth}{@{\extracolsep{\fill}} l l l}
+      }{%
+    \end{tabular*}
+  \end{center}
+}
+% Define a line of cv information(skill)
+% Usage: \cvskill{<type>}{<skillset>}
+\newcommand*{\cvskillsummary}[3]{%
+  \skillsetsummarystyle{#1} & \skillsetsummarystyle{#2} & \skillsetsummarystyle{#3} \\
+
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
