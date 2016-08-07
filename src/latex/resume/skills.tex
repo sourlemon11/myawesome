@@ -16,7 +16,7 @@
   }~]
   [~ if (r.skills && r.skills.sets && r.skills.sets.length ) { ~]
   [~ _.each( r.skills.sets, function(sks) { ~]
-    [~ Skills.push(sks.skills); ~]
+    [~ if( sks.name === "Summary" ){} else{ Skills.push(sks.skills);} ~]
   [~ }); ~]
   [~ var nrows = 3 ~]
   [~ Skills = _.flatten(Skills); ~]
