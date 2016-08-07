@@ -1,3 +1,3 @@
-./src/latex/index.js
-./src/latex/node_modules
-./src/latex/package.json
+src/latex/index.js
+src/latex/node_modules
+src/latex/package.json
