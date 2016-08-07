@@ -620,16 +620,14 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}} l l l}
 }{%
-    \end{tabular*}
   \end{center}
 }
 
 % Define a line of cv information(skill)
 % Useage: \cvskill{<skillset>}{<level>}
-\newcommand*{\cvskill}[3]{%
- \skillsetstyle{#1} & \skillsetstyle{#2} & \skillsetstyle{#3}
+\newcommand*{\cvskill}[2]{%
+ \skillsetstyle{#1} & \skillsetstyle{#2}
 \\
 }
 
