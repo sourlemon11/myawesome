@@ -255,8 +255,8 @@
 \newcommand*{\coursesetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of skill
-\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skilllevelstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{text} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{\fontsizeB}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skilllevelstyle}[1]{{\fontsize{\fontsizeB}{1em}\bodyfont\itshape\color{text} #1}}
 \newcommand*{\skillsetsummarystyle}[1]{{\fontsize{\fontsizeB}{1em}\bodyfont\color{text} \ifthenelse{\isempty{#1}}{}{\large\textbullet} #1}}
 
 % For elements of the cover letter
