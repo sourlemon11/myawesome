@@ -14,7 +14,7 @@
     {[[ cur.activity ]]} % cur title
     {[[ cur.title ]]} % Organization
     {[[ cur.location ]]} % Location
-    {[[ h.dateRange( cur ) ]]} % Date(s)
+    {[[ cur.fulldates ]]} % Date(s)
     {[~ if (cur.highlights && cur.highlights.length ) { ~]
       \begin{cvitems} % Description(s) of tasks/responsibilities
 [[ h.pad( cur.highlights.map( function(h) { return '\\item {' + h + '}' }), -8 ) ]]

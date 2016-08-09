@@ -15,7 +15,7 @@
     {[[ job.position ]]} % Job title
     {[[ job.employer ]]} % Organization
     {[[ job.location ]]} % Location
-    {[[ h.dateRange( job ) ]]} % Date(s)
+    {[[ job.fulldates ]]} % Date(s)
     {[~ if (job.highlights && job.highlights.length ) { ~]
       \begin{cvitems} % Description(s) of tasks/responsibilities
 [[ h.pad( job.highlights.map( function(h) { return '\\item {' + h + '}' }), -8 ) ]]
