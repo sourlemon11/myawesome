@@ -627,6 +627,7 @@
     \begin{tabular*}{0.75\textwidth}{l l}
 }{%
     \end{tabular*}
+}{%
 }
 
 % Define a line of cv information(skill)
