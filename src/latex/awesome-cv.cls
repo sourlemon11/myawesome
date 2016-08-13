@@ -107,6 +107,7 @@
 \fancyhfoffset{0em}
 % Remove head rule
 \renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 % Clear all header & footer fields
 \fancyhf{}
 % Enable if you want to make header or footer using fancyhdr
@@ -504,6 +505,14 @@
   \fancyfoot[L]{\footerstyle{#1}}
   \fancyfoot[C]{\footerstyle{#2}}
   \fancyfoot[R]{\footerstyle{#3}} 
+}
+
+% Define a topofpage header for CV
+\newcommand*{\makepagecvheader}[3]{%
+  \fancyhead{}
+  \fancyhead[L]{\footerstyle{#1}}
+  \fancyhead[C]{\footerstyle{#2}}
+  \fancyhead[R]{\footerstyle{#3}} 
 }
 
 % Define a section for CV
