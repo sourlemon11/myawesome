@@ -1,0 +1,24 @@
+[~ if (r.projects && r.projects && r.projects.length ) { ~]
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+[~ _.each( r.projects, function(proj) { ~]
+  \cventry
+    {[[ proj.role ]]} % proj title
+    {\href{[[ proj.url ]]}{[[ proj.title ]]}} % Organization
+    {[[ proj.location ]]} % Location
+    {} % Date(s)
+    {[~ if (proj.description && proj.description.length ) { ~]
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item{[[ proj.description ]]}
+      \end{cvitems}
+    [~ } ~]}
+[~ }); ~]
+\end{cventries}
+[~ } ~]

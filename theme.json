@@ -27,6 +27,7 @@
     "src/latex/resume/skills.tex",
     "src/latex/resume/honors.tex",
     "src/latex/resume/presentation.tex",
+    "src/latex/resume/projects.tex",
     "src/latex/resume/summary.tex",
     "src/latex/resume/writing.tex",
     "src/latex/cv/committees.tex",
